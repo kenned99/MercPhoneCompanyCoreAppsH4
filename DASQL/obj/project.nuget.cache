@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nl0TfgqK9PQyl0O+gfEIWtZsstVmSUEQ4fM3U4WG2O6M2N/0bQ3zES+C0ep+1zTOifWS4qLSGKtfvo0Ohx50FQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\DASQL\\DASQL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kej\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\kej\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

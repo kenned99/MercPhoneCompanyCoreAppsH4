@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2+UAHIpqXf8kkyVAs3jrmYB/E85bgUuko8fgoBHqmVSmtDMSu/CGfSIrWL+2NA6D95sfcU8h+Vni1yvcgGa7+w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\Model\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kej\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\kej\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
