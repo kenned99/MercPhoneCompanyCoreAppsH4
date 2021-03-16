@@ -1,0 +1,14 @@
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\Interfaces.dll
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\Models.dll
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.csprojAssemblyReference.cache
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.AssemblyInfoInputs.cache
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.AssemblyInfo.cs
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\DASQL.deps.json
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\DASQL.dll
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\DASQL.pdb
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\Interfaces.pdb
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.csproj.CoreCompileInputs.cache
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.csproj.CopyComplete
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.dll
+C:\Users\kej\source\repos\MercPhoneCompany\DASQL\obj\Debug\netstandard2.0\DASQL.pdb

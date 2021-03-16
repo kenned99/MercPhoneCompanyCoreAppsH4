@@ -6,8 +6,12 @@ namespace Models
     {
         public Call()
         {
-            Id = Guid.NewGuid();
+            //Id = Guid.NewGuid();
         }
-        public Guid Id { get; set; }
+        public int Id { get; set; }
+        public int CustId { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string PhoneNo { get; set; }
     }
 }

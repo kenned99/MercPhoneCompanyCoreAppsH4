@@ -6,28 +6,20 @@ namespace Models
 {
     public class User
     {
-        public User()
+        /*public User()
         {
             Id = Guid.NewGuid();
-        }
-        public Guid Id { get; set; }
+        }*/
+        public int Id { get; set; }
         public string FullName { get; set; }
         public int RoleId { get; set; }
         public string Adress { get; set; }
+        public string Adress2 { get; set; }
+        public string Email { get; set; }
+        public string PhoneNo { get; set; }
+        public string City { get; set; }
+        public string PostCode { get; set; }
+        public DateTime Birthday { get; set; }
         public string Password { get; set; }
-
-/*UserId (PN) | GUID
-Full Name | varchar
-Role | varchar
-Adress | Varchar
-Adress 2 | varchar
-Email | varchar
-Phone No. | varchar
-City | varchar
-Post Code | varchar
-Birthday | Date
-Password | varchar
-Picture | BLOB*/
-
     }
 }

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "MercPhoneCompany\BussinessLogic.csproj", "{B3BA958B-5D19-4D34-9C27-C6DF797D8068}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BussinessLogic", "MercPhoneCompany\BussinessLogic.csproj", "{B3BA958B-5D19-4D34-9C27-C6DF797D8068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Model\Models.csproj", "{60368563-1D3D-4202-9CC9-3012B271DA61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Model\Models.csproj", "{60368563-1D3D-4202-9CC9-3012B271DA61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAJSON", "DAJSON\DAJSON.csproj", "{05A33191-9121-4136-8DFA-245711741A9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAJSON", "DAJSON\DAJSON.csproj", "{05A33191-9121-4136-8DFA-245711741A9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DASQL", "DASQL\DASQL.csproj", "{182EA693-D994-48CB-AC0F-1395074526CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DASQL", "DASQL\DASQL.csproj", "{182EA693-D994-48CB-AC0F-1395074526CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{A4655E4C-C711-4824-9B25-7E0E9A6EA4CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{A4655E4C-C711-4824-9B25-7E0E9A6EA4CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL", "PL\PL.csproj", "{A49D405A-FB4D-4A81-B18A-7AB5B4ED373F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A4655E4C-C711-4824-9B25-7E0E9A6EA4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4655E4C-C711-4824-9B25-7E0E9A6EA4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4655E4C-C711-4824-9B25-7E0E9A6EA4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A49D405A-FB4D-4A81-B18A-7AB5B4ED373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49D405A-FB4D-4A81-B18A-7AB5B4ED373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49D405A-FB4D-4A81-B18A-7AB5B4ED373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49D405A-FB4D-4A81-B18A-7AB5B4ED373F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

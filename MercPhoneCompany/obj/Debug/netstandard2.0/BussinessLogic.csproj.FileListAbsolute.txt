@@ -1,0 +1,9 @@
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\bin\Debug\netstandard2.0\BussinessLogic.deps.json
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\bin\Debug\netstandard2.0\BussinessLogic.dll
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\bin\Debug\netstandard2.0\BussinessLogic.pdb
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.csprojAssemblyReference.cache
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.AssemblyInfoInputs.cache
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.AssemblyInfo.cs
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.dll
+C:\Users\kej\source\repos\MercPhoneCompany\MercPhoneCompany\obj\Debug\netstandard2.0\BussinessLogic.pdb
