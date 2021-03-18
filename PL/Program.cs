@@ -1,7 +1,6 @@
 ﻿using System;
-using DASQL;
 using Models;
-using DAJSON;
+using System.Threading;
 
 namespace PL
 {
@@ -14,21 +13,28 @@ namespace PL
             //userControl.dbConnect();
 
             //MongoDB
-            DAJSON.MongoDB mongoDB = new DAJSON.MongoDB();
+            Interfaces.IBusinessLogic bl = new BusinessLogic.BL();
             User user = new User();
             // user.Id = 1;
-            user.Password = "ris";
+            user.Password = "password1";
             user.Email = "kenneth_jensen_99@hotmail.com";
-            user.FullName = "tis";
-            user.PhoneNo = "123";
+            user.FullName = "Kenneth Sørnsen";
+            user.PhoneNo = "42 68 67 68";
             user.RoleId = 1;
+            user.isEmployee = true;
+            user.Birthday = DateTime.Now;
+            string key = "";
 
+            Console.WriteLine(bl.Login(user.Email, user.Password));
 
-            mongoDB.MongoDBConnect();
+            bl.AddUser(user, user.isEmployee);
 
-            Console.WriteLine(mongoDB.Login(user.Email, user.Password));
+            Thread.Sleep(2000);
 
-            mongoDB.AddUser(user);
+            User user1 = bl.SelectAnUser(user.FullName, key, user.isEmployee);
+
+            Console.WriteLine(user1.FullName);
+
             Console.ReadLine();
         }
     }

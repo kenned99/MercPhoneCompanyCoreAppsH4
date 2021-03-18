@@ -7,8 +7,54 @@ using Interfaces;
 
 namespace DASQL
 {
-    public class UserControl : Interfaces.IUserControl
+    public class DASQL : Interfaces.IUserControl
     {
+        public bool AddUser(User user, bool IsEmployee)
+        {
+            if (!IsEmployee) return false;
+
+            MySqlConnection conn = dbConnect();
+            string command = "INSERT INTO Users(FullName, Email, Password, RoleId, City, PhoneNo) " +
+                $"VALUES ('{user.FullName}', '{user.Email}', '{user.Password}', '{(int)user.RoleId}', '{user.City}', '{user.PhoneNo}')";
+            int result = new MySqlCommand(command, conn).ExecuteNonQuery();
+            conn.Close();
+
+            if (result != 0) return true;
+            return false;
+        }
+
+        public string GenerateNumber()
+        {
+            Random rnd = new Random();
+
+            string number = $"{rnd.Next(10000000, 9999999)}";
+            while (!ValidateNumber(number))
+            {
+                number = $"{rnd.Next(10000000, 9999999)}";
+            }
+            return number;
+        }
+
+        public bool ValidateNumber(string number)
+        {
+            if (number.Length < 8 || number.Length > 10)
+                return false;
+
+            MySqlConnection conn = dbConnect();
+            string command = $"SELECT * FROM Users WHERE PhoneNo = '{number}'";
+
+            using (var reader = new MySqlCommand(command, conn).ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            conn.Close();
+            return true;
+        }
+
         public MySqlConnection dbConnect()
         {
             MySqlConnection cnn;
@@ -18,19 +64,12 @@ namespace DASQL
             cnn.Open();
             Console.WriteLine("Database connection open");
 
-            string sqlString = "INSERT INTO Users (FullName, RoleId, Adress, Adress2, Email, PhoneNo, City, PostCode, Birthday, Password) VALUES ('Kenneth Jensen', 2, 'Merkurvej 25', '1 17', 'Kenneth_jensen_99@hotmail.com', '+45 42686768', 'Viborg', '8800','1999-02-09', 'Password1');";
-            MySqlCommand sql = new MySqlCommand(sqlString, cnn);
-            sql.ExecuteNonQuery();
+           // string sqlString = "INSERT INTO Users (FullName, RoleId, Adress, Adress2, Email, PhoneNo, City, PostCode, Birthday, Password) VALUES ('Kenneth Jensen', 2, 'Merkurvej 25', '1 17', 'Kenneth_jensen_99@hotmail.com', '+45 42686768', 'Viborg', '8800','1999-02-09', 'Password1');";
+           // MySqlCommand sql = new MySqlCommand(sqlString, cnn);
+           // sql.ExecuteNonQuery();
             return cnn;
         }
-        public bool CreateUser(User user, bool IsEmployee)
-        {
-            throw new NotImplementedException();
-        }
-        public string findNumber(string userName, bool IsEmployee)
-        {
-            throw new NotImplementedException();
-        }
+
         public List<Call> GetPhoneRec(User user, bool allTimeHistory, bool IsEmployee)
         {
             List<Call> output = new List<Call>();
@@ -58,14 +97,52 @@ namespace DASQL
             conn.Close();
             return output;
         }
+
         public bool Login(string email, string password)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = dbConnect();
+            string command = $"SELECT * FROM Users WHERE Email = '{email}' AND Password = '{password}'";
+            using (var reader = new MySqlCommand(command, conn).ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if (!reader.HasRows)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
         }
 
-        SqlConnection IUserControl.dbConnect()
+        public User SelectAnUser(string name, string key, bool isEmployee)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = dbConnect();
+            string command = $"SELECT * FROM users WHERE FullName = '{name}'";
+
+            using (var reader = new MySqlCommand(command, conn).ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if (!reader.HasRows) return new User();
+                    var user = new User()
+                    {
+                        FullName = reader["FullName"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Password = "",
+                        RoleId = (int)reader["RoleId"],
+                        Adress = reader["adress"].ToString(),
+                        Adress2 = reader["adress2"].ToString(),
+                        City = reader["city"].ToString(),
+                        PhoneNo = reader["PhoneNo"].ToString(),
+                        PostCode = reader["PostCode"].ToString(),
+                        Birthday = DateTime.Now,
+                        CallList = new List<Call>()
+                    };
+                    return user;
+                }
+                return new User();
+            }
         }
     }
 }

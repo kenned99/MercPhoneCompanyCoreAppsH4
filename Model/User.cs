@@ -6,10 +6,6 @@ namespace Models
 {
     public class User
     {
-        /*public User()
-        {
-            Id = Guid.NewGuid();
-        }*/
         public int Id { get; set; }
         public string FullName { get; set; }
         public int RoleId { get; set; }
@@ -21,5 +17,7 @@ namespace Models
         public string PostCode { get; set; }
         public DateTime Birthday { get; set; }
         public string Password { get; set; }
+        public bool isEmployee { get; set; }
+        public List<Call> CallList { get; set; }
     }
 }

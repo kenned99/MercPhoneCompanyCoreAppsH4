@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DAJSON\DAJSON.csproj" />
-    <ProjectReference Include="..\DASQL\DASQL.csproj" />
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
+    <ProjectReference Include="..\MercPhoneCompany\BusinessLogic.csproj" />
   </ItemGroup>
 
 </Project>

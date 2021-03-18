@@ -60,3 +60,5 @@ C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\runtimes\o
 C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
 C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\DAJSON.dll
 C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\DAJSON.pdb
+C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\BusinessLogic.dll
+C:\Users\kej\source\repos\MercPhoneCompany\PL\bin\Debug\netcoreapp3.1\BusinessLogic.pdb

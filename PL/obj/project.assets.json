@@ -500,6 +500,22 @@
           }
         }
       },
+      "BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DAJSON": "1.0.0",
+          "DASQL": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        }
+      },
       "DAJSON/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1520,6 +1536,11 @@
         "version.txt"
       ]
     },
+    "BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../MercPhoneCompany/BusinessLogic.csproj",
+      "msbuildProject": "../MercPhoneCompany/BusinessLogic.csproj"
+    },
     "DAJSON/1.0.0": {
       "type": "project",
       "path": "../DAJSON/DAJSON.csproj",
@@ -1543,8 +1564,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DAJSON >= 1.0.0",
-      "DASQL >= 1.0.0"
+      "BusinessLogic >= 1.0.0",
+      "Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1579,11 +1600,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\DAJSON\\DAJSON.csproj": {
-              "projectPath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\DAJSON\\DAJSON.csproj"
+            "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\Interfaces\\Interfaces.csproj"
             },
-            "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\DASQL\\DASQL.csproj": {
-              "projectPath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\DASQL\\DASQL.csproj"
+            "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\MercPhoneCompany\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\kej\\source\\repos\\MercPhoneCompany\\MercPhoneCompany\\BusinessLogic.csproj"
             }
           }
         }

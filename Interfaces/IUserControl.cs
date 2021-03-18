@@ -7,10 +7,9 @@ namespace Interfaces
 {
     public interface IUserControl 
     {
-        bool CreateUser(User user, bool IsEmployee);
+        bool AddUser(User user, bool IsEmployee);
         bool Login(string email, string password);
-        string findNumber(string userName, bool IsEmployee);
         List<Call> GetPhoneRec(User user, bool allTimeHistory, bool IsEmployee);
-        SqlConnection dbConnect();
+        User SelectAnUser(string name, string key, bool IsEmployee);
     }
 }
