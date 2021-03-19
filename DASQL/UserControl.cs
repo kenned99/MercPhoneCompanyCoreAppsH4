@@ -9,13 +9,30 @@ namespace DASQL
 {
     public class DASQL : Interfaces.IUserControl
     {
+        public MySqlConnection dbConnect()
+        {
+            MySqlConnection cnn;
+
+            string connectionString = "server=localhost;database=mpc;uid=root;pwd=password;";
+            cnn = new MySqlConnection(connectionString);
+            cnn.Open();
+
+            //Test user
+            // string sqlString = "INSERT INTO Users (FullName, RoleId, Adress, Adress2, Email, PhoneNo, City, PostCode, Birthday, Password) VALUES ('Kenneth Jensen', 2, 'Merkurvej 25', '1 17', 'Kenneth_jensen_99@hotmail.com', '+45 42686768', 'Viborg', '8800','1999-02-09', 'Password1');";
+            // MySqlCommand sql = new MySqlCommand(sqlString, cnn);
+            // sql.ExecuteNonQuery();
+            return cnn;
+        }
+
         public bool AddUser(User user, bool IsEmployee)
         {
             if (!IsEmployee) return false;
 
+            string newNumber = GenerateNumber();
+
             MySqlConnection conn = dbConnect();
-            string command = "INSERT INTO Users(FullName, Email, Password, RoleId, City, PhoneNo) " +
-                $"VALUES ('{user.FullName}', '{user.Email}', '{user.Password}', '{(int)user.RoleId}', '{user.City}', '{user.PhoneNo}')";
+            string command = "INSERT INTO Users(FullName, Email, Password, RoleId, City, PhoneNo, Adress, Adress2, Birthday, PostCode) " +
+                $"VALUES ('{user.FullName}', '{user.Email}', '{user.Password}', '{(int)user.RoleId}', '{user.City}', '{newNumber}', '{user.Adress}', '{user.Adress2}', '{(DateTime)user.Birthday}', '{user.PostCode}')";
             int result = new MySqlCommand(command, conn).ExecuteNonQuery();
             conn.Close();
 
@@ -27,7 +44,7 @@ namespace DASQL
         {
             Random rnd = new Random();
 
-            string number = $"{rnd.Next(10000000, 9999999)}";
+            string number = $"{rnd.Next(10000000, 99999999)}";
             while (!ValidateNumber(number))
             {
                 number = $"{rnd.Next(10000000, 9999999)}";
@@ -55,27 +72,13 @@ namespace DASQL
             return true;
         }
 
-        public MySqlConnection dbConnect()
-        {
-            MySqlConnection cnn;
-
-            string connectionString = "server=localhost;database=mpc;uid=root;pwd=password;";
-            cnn = new MySqlConnection(connectionString);
-            cnn.Open();
-            Console.WriteLine("Database connection open");
-
-           // string sqlString = "INSERT INTO Users (FullName, RoleId, Adress, Adress2, Email, PhoneNo, City, PostCode, Birthday, Password) VALUES ('Kenneth Jensen', 2, 'Merkurvej 25', '1 17', 'Kenneth_jensen_99@hotmail.com', '+45 42686768', 'Viborg', '8800','1999-02-09', 'Password1');";
-           // MySqlCommand sql = new MySqlCommand(sqlString, cnn);
-           // sql.ExecuteNonQuery();
-            return cnn;
-        }
-
         public List<Call> GetPhoneRec(User user, bool allTimeHistory, bool IsEmployee)
         {
             List<Call> output = new List<Call>();
-            if (user.RoleId == 1) return new List<Call>();
+           if (user.RoleId == 1) return new List<Call>();
             MySqlConnection conn = dbConnect();
-            string command = $"SELECT * FROM custcall WHERE ID = '{user.Id}'";
+            string command = $"SELECT * FROM custcall WHERE CustId = '{user.Id}'";
+            //string command = $"SELECT * FROM custcall";
 
             if (allTimeHistory == false)
                 command += $" AND StartTime >= '{DateTime.Now.AddDays(-7)}'";

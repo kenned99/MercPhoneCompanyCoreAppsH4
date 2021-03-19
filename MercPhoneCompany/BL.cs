@@ -8,7 +8,7 @@ namespace BusinessLogic
 {
     public class BL : IBusinessLogic
     {
-       // IUserControl da = new DAJSON.MongoDB(); //MongoDB
+        // IUserControl da = new DAJSON.MongoDB(); //MongoDB
         IUserControl da = new DASQL.DASQL(); //MySQL
 
         public bool AddUser(User user, bool IsEmployee)

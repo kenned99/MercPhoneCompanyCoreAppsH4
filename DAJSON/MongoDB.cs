@@ -73,7 +73,7 @@ namespace DAJSON
             }
 
             CreateNewNumber();
-            while (number == 0) 
+            while (number == 0)
             {
                 CreateNewNumber();
             }
@@ -100,7 +100,7 @@ namespace DAJSON
                     var mwx = x as MongoWriteException;
                     if (mwx != null && mwx.WriteError.Category == ServerErrorCategory.DuplicateKey) //  tjekker om rec findes
                     {
-                        //  added
+                        //  created
                         state = false;
                         return false;
                     }
